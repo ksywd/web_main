@@ -2,9 +2,10 @@ import { decrypt_text } from './crypto.js';
 import { session_check } from './session.js';
 import { checkAuth } from './jwt_token.js';
 
+// 로그인된 사용자의 GCM 비밀번호 복호화 처리
 function init_logined() {
   if (sessionStorage) {
-    decrypt_text(); // AES256 복호화
+    decrypt_text(); // AES-256 복호화
 
     const encryptedGCM = sessionStorage.getItem("Session_Storage_pass2");
     if (encryptedGCM) {
@@ -19,9 +20,10 @@ function init_logined() {
   }
 }
 
+// 페이지 로드 시 실행
 document.addEventListener('DOMContentLoaded', () => {
-  checkAuth();
-  init_logined();
+  checkAuth();      // JWT 토큰 검증
+  init_logined();   // 로그인 사용자 정보 복호화
 
   if (sessionStorage) {
     const encryptedJoin = sessionStorage.getItem("Session_Storage_newJoin");

@@ -1,10 +1,11 @@
+/* 페이지 배경에 보라색에서 파란색으로 이어지는 그라데이션 효과 적용 */
 .gradient-custom {
-    /* fallback for old browsers */
+    /* 예전 브라우저 대응용 배경 색 */
     background: #6a11cb;
-    
-    /* Chrome 10-25, Safari 5.1-6 */
+
+    /* 웹킷 브라우저용 그라데이션 (크롬, 사파리 등) */
     background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
     
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* 기본 브라우저용 그라데이션 */
     background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
 }
