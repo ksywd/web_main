@@ -1,3 +1,5 @@
+const aesGcmKey = window.crypto.subtle;
+
 // AES-GCM 방식으로 문자열 암호화
 async function encryptGCM(plainText, keyStr) {
   const enc = new TextEncoder();
