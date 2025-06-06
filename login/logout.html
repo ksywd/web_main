@@ -16,7 +16,7 @@
 
     <!-- 로그아웃 기능 관련 스크립트 -->
     <script type="module" defer src="../js/cookie.js"></script>
-    <script type="module" defer src="../js/login.js"></script>
+    <!-- <script type="module" defer src="../js/login.js"></script> -->
   </head>
 
   <body>
@@ -34,9 +34,7 @@
                   <p class="text-white-50 mb-5">로그아웃을 하려면 아래 버튼을 눌러주세요.</p>
 
                   <!-- 로그아웃 버튼 -->
-                  <button onclick="logout()" class="btn btn-outline-light btn-lg px-5">
-                    로그아웃
-                  </button>
+                  <button id="logout_btn" class="btn btn-outline-light btn-lg px-5">로그아웃</button>
                 </div>
 
               </div>
@@ -45,5 +43,15 @@
         </div>
       </div>
     </section>
+    <script type="module">
+      function logout() {
+        sessionStorage.clear();
+        localStorage.removeItem("jwt_token");
+        alert("로그아웃 되었습니다.");
+        window.location.href = "../index.html";
+      }
+
+      document.getElementById("logout_btn").addEventListener("click", logout);
+    </script>
   </body>
 </html>
