@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="20220975">
     <meta name="keywords" content="computer">
-    <!-- <base href="http://127.0.0.1:5500"> -->
+    <base href="http://127.0.0.1:5500">
     <title>LoL 메인</title>
 
     <!-- 부트스트랩 CSS + 프로필 전용 CSS -->
@@ -38,7 +38,7 @@
 
     <!-- 세션 체크 -->
     <script type="module">
-      import { session_check_redirectToLogin } from "js/session.js";
+      import { session_check_redirectToLogin } from "../js/session.js";
       session_check_redirectToLogin(); // 로그인 안 된 경우 리디렉션
     </script>
   </head>
@@ -48,7 +48,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="https://www.leagueoflegends.com/ko-kr/">
-          <img src="./image/logo.png" width="200" height="60" onmouseover="over(this)" onmouseout="out(this)">
+          <img src="image/logo.png" width="200" height="60" onmouseover="over(this)" onmouseout="out(this)">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
           data-bs-target="navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
@@ -127,7 +127,7 @@
           <div class="col-lg-4">
             <div class="card mb-4 text-center">
               <div class="card-body">
-                <img src="./image/Profile.png"
+                <img src="image/Profile.png"
                      class="rounded-circle img-fluid" style="width: 150px;" alt="avatar">
                 <h5 class="my-3">김수용</h5>
                 <p class="text-muted mb-1">풀스택 개발자</p>
