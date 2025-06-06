@@ -114,11 +114,11 @@ const check_input = async () => {
 };
 
 // 로그아웃 처리
-export function logout() {
-  sessionStorage.clear();
-  localStorage.removeItem("jwt_token");
-  alert("로그아웃 되었습니다.");
-  window.location.href = "../index.html"; // 로그아웃 후 메인으로 이동
+function logout() {
+  session_del();
+  localStorage.removeItem('jwt_token');
+  logout_count();
+  location.href = '../index.html';
 }
 
 // 로그인 시 아이디 자동 입력 및 세션 체크
